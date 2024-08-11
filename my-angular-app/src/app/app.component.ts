@@ -2,11 +2,12 @@ import {Component, ElementRef, QueryList, ViewChild, ViewChildren} from '@angula
 import {RouterOutlet} from '@angular/router';
 import {PostComponent} from "../post/post.component";
 import {CommonModule} from "@angular/common";
+import {HeadComponent} from "../head/head.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, PostComponent, CommonModule],
+  imports: [RouterOutlet, PostComponent, CommonModule, HeadComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

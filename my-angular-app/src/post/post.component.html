@@ -1,6 +1,9 @@
 <div class="containerPost">
+
   <h1 class="titlestyle">{{ title }}</h1>
   <img [src]="addImage" alt="image" class="imagePost"/>
+  <ng-content select=".point"></ng-content>
   <p>{{ text }}</p>
   <button class="botPost" (click)="onbotclick($event)"> اضافه کردن</button>
+  <ng-content select=".price"></ng-content>
 </div>

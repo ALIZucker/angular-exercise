@@ -1,0 +1,8 @@
+.main{
+  width: 97%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
