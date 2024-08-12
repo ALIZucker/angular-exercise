@@ -1,24 +1,30 @@
-import {Directive, ElementRef, HostListener, Input, TemplateRef, ViewContainerRef} from '@angular/core';
+import {Directive, ElementRef, HostListener, Input, OnInit, TemplateRef, ViewContainerRef} from '@angular/core';
+import {Structvalue} from "./head.interface"
 
 @Directive({
   selector: '[appDivstructure]',
   standalone: true
 })
-export class DivstructureDirective {
+export class DivstructureDirective implements OnInit{
 
-  constructor(private templateRef: TemplateRef<any>, private viewContainerRef: ViewContainerRef) {
+  constructor(private templateRef: TemplateRef<Structvalue>, private viewContainerRef: ViewContainerRef) {
   }
 
-  @Input()
-  set appDivstructure(content:string) {
-    if (content=="click"){
-      this.viewContainerRef.createEmbeddedView(this.templateRef);
-    }else {
-      this.viewContainerRef.clear();
+  context!: Structvalue
+  title:string="عنوان دوم"
+
+  ngOnInit() {
+    this.context = {
+      title: this.title,
+      control: {
+        changetitle: ()=>this.changeTitle()
+      }
     }
+    this.viewContainerRef.createEmbeddedView(this.templateRef, this.context)
   }
-  @HostListener('click', ['$event'])
-  clickevent(){
-    alert('click1');
+  changeTitle(): void {
+      this.title="topic value"
+    this.context.title = this.title
+
   }
 }

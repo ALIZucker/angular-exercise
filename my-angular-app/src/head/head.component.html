@@ -1,4 +1,8 @@
 <div appDivstyle>
-  <h1>عنوان سایت</h1>
-  <button *appDivstructure='"click"' (click)="onclicked()"> عوض کردن عنوان</button>
+
+  <div *appDivstructure="let text =title ;let con=control">
+    <h1>{{text}}</h1>
+    <button (click)="con.changetitle()" >عوض</button>
+  </div>
+
 </div>
