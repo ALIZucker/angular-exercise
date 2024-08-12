@@ -1,11 +1,13 @@
-<app-head></app-head>
 <div class="listpost">
-    <app-post #postOne  title="محصول اول" addImage="assets/img/1.jpg" (botclick)="onbotClick($event)"  ></app-post>
-    <app-post #postOne  title="محصول اول" addImage="assets/img/2.jpg" ></app-post>
-    <app-post #postOne  title="محصول اول" addImage="assets/img/3.jpg" ></app-post>
-    <app-post #postOne  title="محصول اول" addImage="assets/img/4.webp" ></app-post>
-</div>
+  <app-post #postOne title="محصول اول" addImage="assets/img/1.jpg" (botclick)="onbotClick($event)"></app-post>
+  <app-post #postOne title="محصول اول" addImage="assets/img/1.jpg" (botclick)="onbotClick($event)"></app-post>
+  <app-post #postOne title="محصول اول" addImage="assets/img/1.jpg" (botclick)="onbotClick($event)"></app-post>
+  <app-post #postOne title="محصول اول" addImage="assets/img/1.jpg" (botclick)="onbotClick($event)"></app-post>
 
-<div *ngIf="false; else null">
-  <p>sdasdasdasdasdasdasdasdasdasd</p>
 </div>
+<hr/>
+<section style=" background-color:red;display: flex;flex-direction: row-reverse;justify-content: space-around;">
+  <app-other-post></app-other-post>
+</section>
+
+

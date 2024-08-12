@@ -3,11 +3,12 @@ import {RouterOutlet} from '@angular/router';
 import {PostComponent} from "../post/post.component";
 import {CommonModule} from "@angular/common";
 import {HeadComponent} from "../head/head.component";
+import {OtherPostComponent} from "../other-post/other-post.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, PostComponent, CommonModule, HeadComponent],
+  imports: [RouterOutlet, PostComponent, CommonModule, HeadComponent,OtherPostComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
